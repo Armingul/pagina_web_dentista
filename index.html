@@ -1,39 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Titulo de la web| Menos de 55 caracteres</title>
+<title>Clínica Mingari</title>
 <meta charset="utf-8" />
-<meta name="description" content="Debe contener las palabras clave, tratar de atraer clicks y de longitud entre 150 y 160 caracteres">
-<link rel="stylesheet" href="estilos.css" />
+<meta name="viewport" content="widt=device=width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="owner" content="Clinica Mingari SL">
+<meta name="author" content="Sergio Villaroel Fernández, Andrea Del Ramo, Jesús Verdúguez Gervaso">
+<meta name="description" content="Clínicas Dentales en Toledo con los mejores profesionales en Endodoncia, Periodoncia, Prótesis, Odontopediatria, Ortodoncia, Implantologia y Estética dental y facial ☎ 925 25 23 50 // ☎ 925 48 48 40">
+<meta name="keywords" content="clinica dental en toledo, endodoncia en toledo, periodoncia en toledo, prótesis en toledo, odontopediatria en toledo, ortodoncia en toledo, implantologia en toledo, estética dental en toledo, estetica facial en toledo, endodoncia en toledo, 
+                                clinica, dental, clinica dental, dientes, dentista, cirugia dental, dientes sanos, blanqueamiento dental, blanqueamiento en toledo, blanqueamiento, dentistas en toledo, clinicas dentales en toledo, dentistas en toledo">
+<link rel="stylesheet" href="CSS/estilos.css"/>
+<link rel="stylesheet" href="CSS/normalize.css"/>
 <link rel="shortcut icon" href="/favicon.ico" />
 </head>
  
-<body>
-    <nav>
-        <a class="active" href="/index.htm">Home</a>
-        <a href="/uno.htm">Uno</a>
-        <a href="/dos.htm">Dos</a>
-        <a href="/tres.htm">Tres</a>
-        <a href="/tres.htm">Cuatro</a>
-        <a href="/tres.htm">cinco</a>
-    </nav>
-    <header>
-       <h1>Mi sitio web</h1>
-       <p>Mi sitio web creado en html5</p>
-       
-    </header>
-    <section>
-       <article>
-           <h2>Titilo de contenido</h2>
-           <p> Contenido </p>
-       </article>
-    </section>
-    <aside>
-       <h3>Titulo de contenido</h3>
-           <p>contenido</p>
-    </aside>
-    <footer>
-        Creado por mi el 2011
-    </footer>
-</body>
+    <body>
+        <nav class="page__menu menu">
+            <div id="logoMenu">
+                <img src="icons/logoMenu.svg">
+            </div>
+            <ul class="menu__list r-list">
+            <li class="menu__group"><a href="#home" class="menu__link r-link text-underlined">Home</a></li>
+            <li class="menu__group"><a href="#especialidades" class="menu__link r-link text-underlined">Especialidades</a></li>
+            <li class="menu__group"><a href="#historia" class="menu__link r-link text-underlined">Historia</a></li>
+            <li class="menu__group"><a href="#contacto" class="menu__link r-link text-underlined">Contacto</a></li>
+            </ul>
+        </nav>
+        <header>
+            <div id="home">
+                <!-- As seen on rogertalk.com -->
+                <section class="carousel">
+                    <nav></nav>
+                    <div class="container">
+                        <div class="slide" id="slide1">
+                            <h1>Cuidamos tu sonrisa</h1>
+                        </div> 
+                        <div class="slide" id="slide2">
+                            <h1>Tap to talk, tap to listen</h1>
+                            <p>Talk with anyone in your phone,<br>anytime, no matter where they are.</p>
+                        </div>
+                        <div class="slide" id="slide3">
+                            <h1>Feel closer</h1>
+                            <p>From weather to time of day, get Glimpses<br>into someone’s life at the moment.</p>
+                        </div>
+                        <div class="slide" id="slide4">
+                            <h1>Thoughtfully simple</h1>
+                            <p>All you need is someone’s<br>phone number to get started.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>  
+        </header>
+            <div id="especialidades">
+
+            </div>
+            <div id="historia">
+
+            </div>
+        <footer>
+            <div id="contacto">
+
+            </div>
+        </footer>
+        <script>
+            function Carousel(element) {
+                this._autoDuration = 0;
+                this._container = element.querySelector('.container');
+                this._interval = null;
+                this._nav = element.querySelector('nav');
+                this._slide = 0;
+                this._touchAnchorX = 0;
+                this._touchTime = 0;
+                this._touchX1 = 0;
+                this._touchX2 = 0;
+                element.addEventListener('click', this);
+                element.addEventListener('touchstart', this);
+                element.addEventListener('touchmove', this);
+                element.addEventListener('touchend', this);
+                element.addEventListener('transitionend', this);
+                window.addEventListener('blur', this);
+                window.addEventListener('focus', this);
+                this.set(0);
+              }
+              
+              Carousel.prototype.auto = function (ms) {
+                if (this._interval) {
+                  clearInterval(this._interval);
+                  this._interval = null;
+                }
+                if (ms) {
+                  this._autoDuration = ms;
+                  var self = this;
+                  this._interval = setInterval(function () { self.next(); }, ms);
+                }
+              }
+              
+              Carousel.prototype.handleEvent = function (event) {
+                if (event.touches && event.touches.length > 0) {
+                  this._touchTime = +new Date;
+                  this._touchX1 = this._touchX2;
+                  this._touchX2 = event.touches[0].screenX;
+                }
+              
+                var screen = document.documentElement.clientWidth;
+                var position = this._slide + (this._touchAnchorX - this._touchX2) / screen;
+                var velocity = (new Date - this._touchTime) <= 200 ? (this._touchX1 - this._touchX2) / screen : 0;
+              
+                switch (event.type) {
+                  case 'blur':
+                    this.auto(0);
+                    break;
+                  case 'click':
+                    if (event.target.parentNode != this._nav) break;
+                    var i = parseInt(event.target.dataset.slide);
+                    if (!isNaN(i)) {
+                      event.preventDefault();
+                      this.auto(0);
+                      this.set(i);
+                    }
+                    break;
+                  case 'focus':
+                    this.auto(this._autoDuration);
+                    break;
+                  case 'touchstart':
+                    event.preventDefault();
+                    this.auto(0);
+                    this._container.style.transition = 'none';
+                    this._touchAnchorX = this._touchX1 = this._touchX2;
+                    break;
+                  case 'touchmove':
+                    this._container.style.transform = 'translate3d(' + (-position * 100) + 'vw, 0, 0)';
+                    break;
+                  case 'touchend':
+                    this._container.style.transition = '';
+                    var offset = Math.min(Math.max(velocity * 4, -0.5), 0.5);
+                    this.set(Math.round(position + offset));
+                    break;
+                  case 'transitionend':
+                    var i = this._slide, count = this._countSlides();
+                    if (i >= 0 && i < count) break;
+                    // The slides should wrap around. Instantly move to just outside screen on the other end.
+                    this._container.style.transition = 'none';
+                    this._container.style.transform = 'translate3d(' + (i < 0 ? -count * 100 : 100) + 'vw, 0, 0)';
+                    // Force changes to be applied sequentially by reflowing the element.
+                    this._container.offsetHeight;
+                    this._container.style.transition = '';
+                    this._container.offsetHeight;
+                    // Animate the first/last slide in.
+                    this.set(i < 0 ? count - 1 : 0);
+                    break;
+                }
+              };
+              
+              Carousel.prototype.next = function () {
+                this.set(this._slide + 1);
+              };
+              
+              Carousel.prototype.previous = function () {
+                this.set(this._slide - 1);
+              };
+              
+              Carousel.prototype.set = function (i) {
+                var count = this._countSlides();
+                if (i < 0) { i = -1; } else if (i >= count) { i = count; }
+                this._slide = i;
+                this._container.style.transform = 'translate3d(' + (-i * 100) + 'vw, 0, 0)';
+                this._updateNav();
+              };
+              
+              Carousel.prototype._countSlides = function () {
+                return this._container.querySelectorAll('.slide').length;
+              };
+              
+              Carousel.prototype._updateNav = function () {
+                var html = '', count = this._countSlides();
+                for (var i = 0; i < count; i++) {
+                  if (i > 0) html += '&nbsp;';
+                  html += '<a' +  (i == this._slide ? ' class="current"' : '') + ' data-slide="' + i + '" href="#">●</a>';
+                }
+                this._nav.innerHTML = html;
+              }
+              
+              var carousels = Array.prototype.map.call(document.querySelectorAll('.carousel'), function (element) {
+                var carousel = new Carousel(element);
+                carousel.auto(5000);
+                return carousel;
+              });
+        </script>
+    </body>
 </html>
