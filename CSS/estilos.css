@@ -198,14 +198,7 @@ DEPENDENCES
     width: 100%;
     transition-duration: .2s;
   }
-  h1{
-    color: white;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 144px;
-  }
-  
+
   /*
   =====
   SETTINGS
@@ -247,12 +240,12 @@ DEPENDENCES
 
   #home{
     background-color: aqua;
-    height: 750px;
+    height: auto;
     width: 100%;
   }
   #especialidades{
     background-color: red;
-    height: 750px;
+    height: auto;
     width: 100%;
   }
   #historia{
@@ -272,7 +265,7 @@ DEPENDENCES
     padding: 0px 0;
     position: relative;
     width: 100vw;
-    height: 750px;
+    height: 700px;
   }
   
   .carousel > .container {
@@ -310,15 +303,68 @@ DEPENDENCES
   
   .carousel .slide {
     flex-shrink: 0;
-    line-height: 1.4;
-    text-align: center;
     width: 100vw;
-    line-height: 750px;
+    position: relative;
   }
 
+  .slide img{
+    position: relative;
+    width:100%;
+    z-index:-1;
+  }
+  .h1{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100px;
+    font-weight: 800;
+    margin:0;
+  }
+  .h2{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 75px;
+    font-weight: 800;
+    margin:0;
+  }
+  .sub{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    
+  }
+  .textoslide1{
+    margin-left: 10%;
+    margin-top: 8%;
+    position: absolute;
+    z-index: inherit 90;
+  }
+  .textoslide2{
+    margin-left: 60%;
+    margin-top: 15%;
+    position: absolute;
+    z-index: inherit 90;
+    text-align: center;
+  }
+  .textoslide3{
+    margin-left: 33%;
+    margin-top: 15%;
+    position: absolute;
+    z-index: inherit 90;
+    text-align: center;
+  }
   #slide1{
-    background-image: url("../img/image1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../img/image1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .slide2{
+    background: url(../img/image1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
