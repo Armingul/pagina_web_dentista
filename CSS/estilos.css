@@ -239,7 +239,6 @@ DEPENDENCES
   }
 
   #home{
-    background-color: aqua;
     width: 100%;
   }
   #especialidades{
@@ -346,7 +345,8 @@ DEPENDENCES
     padding: 0px 0;
     position: relative;
     width: 100%;
-    height: 700px;
+    height:auto;
+    max-height: 750px;
   }
   
   .carousel > .container {
@@ -441,18 +441,74 @@ DEPENDENCES
     z-index: inherit 90;
     text-align: center;
   }
-  #slide1{
-    background: url(../img/image1.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
 
-  .slide2{
-    background: url(../img/image1.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  #valores{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 10%;
+    margin-bottom: 2%;
   }
+  @media (max-width: 1100px) {
+    #valores {
+      margin-bottom: 10%;
+    }
+  }
+  @media (max-width: 450px) {
+    #valores {
+      display:unset;
+    }
+  }
+  #valores1{
+    display: flex;
+    justify-content:space-around;
+  }
+  @media (max-width: 1100px) {
+    #valores1 {
+      display:unset;
+    }
+  }
+  #valores2{
+    display: flex;
+    justify-content:space-around;
+  }
+  @media (max-width: 1100px) {
+    #valores2 {
+      display:unset;
+    }
+  }
+  #tituloValores{
+    color: #00BCD4;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+  }
+  #textoValores{
+    text-align: justify;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+  }
+  #valor{
+    border-radius: 12px;
+    /* box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%); */
+    width:35%;
+    height: 90%;
+    padding: 2%;
+  }
+  @media (max-width: 1100px) {
+    #valor {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5%;
+      height: 50%;
+      width: 70%;
+    }
+  }
+  @media (max-width: 450px) {
+    #valor {
+      width: 90%;
+      margin-top: 5%;
+    }
+  }
+  .icono{
+    height: 40px;
+    width: 40px;
+}
