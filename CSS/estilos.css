@@ -242,33 +242,97 @@ DEPENDENCES
     width: 100%;
   }
   #especialidades{
-    background-color: red;
+    background-color: grey;
     height: 750px;
     width: 100%;
   }
   #historia{
-    background-color: orange;
+    background-color: grey;
     height: 750px;
     width: 100%;
   }
   #contacto{
     background: #007281;
     width: 100%;
-    height: 750px;
+    height: 850px;
+    padding-top: 5%;
    
+  }
+  .iconoInfo{
+    
+    height: 19px;
+    margin-right: 5px;
+    
+  }
+  #info{
+   
+    display: flex;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #info p{
+    
+    font-family: Nunito;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: bold;
+    /* identical to box height */
+
+
+    /* White */
+
+    color: #FFFFFF;
+
+  }
+
+  #info h2{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 19px;
+
+    /* White */
+
+    color: #FFFFFF;
+  }
+  #infoSantaBarbara{
+
+    max-width: 712px;
+    width: 45%;
+    height: 100%;
+   
+    margin-left: 1%;
+    
+  
+  }
+  #infoValparaiso{
+   
+    max-width: 712px;
+    width: 45%;
+    height: 100%;
+    
+    margin-right: 1%;
   }
   #maps{
     
+    
     display: flex;
     width: 100%;
-    height: 90%;
+    height: 60%;
    
     align-items: center;
     justify-content: center;
+   
   }
   #mapValparaiso{
-    width: 35%;
-    height: 50%;
+    max-width: 712px;
+    width: 45%;
+    height: 90%;
     margin-right: 1%;
     position: flex;
     
@@ -280,10 +344,12 @@ DEPENDENCES
     border-radius: 12px;
   }
   #mapSantaBarbara{
-    width: 35%;
-    height: 50%;
+    max-width: 712px;
+    width: 45%;
+    height: 90%;
     margin-left: 1%;
     position: flex;
+  
    
   }
   #mapSantaBarbara iframe{
@@ -294,8 +360,9 @@ DEPENDENCES
   }
 
   #infoFooter{
-    height: 10%;
+    height: 7%;
     width: 100%;
+    
 
   }
   #copyRigth{
@@ -331,7 +398,6 @@ DEPENDENCES
     /* identical to box height */
 
     text-align: right;
-    text-decoration-line: underline;
     word-spacing: 1em;
 
 /* White */
@@ -368,7 +434,7 @@ DEPENDENCES
   }
   
   .carousel > nav a {
-    color: #000;
+    color: white;
     font-size: 24px;
     opacity: .2;
     text-decoration: none;
@@ -512,3 +578,4 @@ DEPENDENCES
     height: 40px;
     width: 40px;
 }
+
