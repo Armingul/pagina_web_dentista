@@ -426,14 +426,14 @@
     height: 100%;
     z-index:-1;
   }
-  .h1{
+  h1{
     color: white;
     font-family: 'Nunito', sans-serif;
     font-size: 100px;
     font-weight: 800;
     margin:0;
   }
-  .h2{
+  h2{
     color: white;
     font-family: 'Nunito', sans-serif;
     font-size: 75px;
