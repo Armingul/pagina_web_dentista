@@ -275,6 +275,7 @@ html{
     height: 200px;
     margin: 10px;
     text-align: center;
+    margin-bottom: 3%;
   }
   @media (max-width: 1500px) {
     #datosBox {
@@ -492,7 +493,7 @@ html{
     position: relative;
     width: 100%;
     height:auto;
-    max-height: 750px;
+    max-height: 950px;
   }
   
   .carousel > .container {
@@ -634,10 +635,11 @@ html{
   }
   #valor{
     border-radius: 12px;
-    /* box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%); */
+    box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
     width:35%;
     height: 90%;
     padding: 2%;
+    background-color: #B3EBF2;
   }
   @media (max-width: 1100px) {
     #valor {
