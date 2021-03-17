@@ -248,7 +248,7 @@ html{
     font-weight: normal;
     font-size: 20px;
     line-height: 19px;
-    text-align: justify;
+    /* text-align: justify; */
     
     /* Gray/00 */
     
@@ -289,10 +289,47 @@ html{
       height: 200px;
     }
   }
+  #datosBox1{
+    background-image: url("../img/dato1.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 70%;
+    border-top-left-radius: 12px;
+    border-top-right-radius:12px;
+    box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
+  }
+  #datosBox2{
+    background-image: url("../img/dato2.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 70%;
+    border-top-left-radius: 12px;
+    border-top-right-radius:12px;
+    box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
+  }
+  #datosBox3{
+    background-image: url("../img/dato3.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 70%;
+    border-top-left-radius: 12px;
+    border-top-right-radius:12px;
+    box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
+  }
   #datosTitulo{
-    color: #3E3E3E;
+    color: #ffffff;
     font-family: 'Nunito', sans-serif;
-    font-size: 38px;
+    font-size: 58px;
+    font-weight: 800;
+    margin-block-start: 0.1em;
+    margin-block-end: 0em;
+    padding: 5px;
+    padding-top: 10%;
+  }
+  #datosSub{
+    color: #5a5a5a;
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
     font-weight: 800;
     margin-block-start: 0.1em;
     margin-block-end: 0em;
@@ -493,7 +530,7 @@ html{
     position: relative;
     width: 100%;
     height:auto;
-    max-height: 950px;
+    max-height: 750px;
   }
   
   .carousel > .container {
@@ -629,7 +666,7 @@ html{
     font-size: 24px;
   }
   #textoValores{
-    text-align: justify;
+    /* text-align: justify; */
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
   }
@@ -660,13 +697,18 @@ html{
     height: 40px;
     width: 40px;
   }
+  #historia{
+    margin:10px;
+    line-height: 2;
+  }
   #especialidad{
     border-radius: 12px;
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
     width:450px;
     height: 450px;
-    margin: 20px;
-    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+    /* text-align: justify; */
     
   }
   @media (max-width: 1500px) {
@@ -688,7 +730,7 @@ html{
     height: 450px;
     margin: 0 auto;
     margin-bottom: 1%;
-    text-align: justify;
+    /* text-align: justify; */
   }
   @media (max-width: 600px) {
     #especialidadE {
