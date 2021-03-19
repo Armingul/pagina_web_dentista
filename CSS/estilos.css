@@ -367,7 +367,7 @@ fading siblings
     }
   }
   #datosBox1{
-    background-image: url("../img/dato1.png");
+    background-image: url("../img/dato1.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     height: 70%;
@@ -376,7 +376,7 @@ fading siblings
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
   }
   #datosBox2{
-    background-image: url("../img/dato2.png");
+    background-image: url("../img/dato2.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     height: 70%;
@@ -385,7 +385,7 @@ fading siblings
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
   }
   #datosBox3{
-    background-image: url("../img/dato3.png");
+    background-image: url("../img/dato3.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     height: 70%;
