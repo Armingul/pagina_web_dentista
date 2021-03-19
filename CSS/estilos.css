@@ -259,14 +259,10 @@ fading siblings
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 100%;
-    margin:10px;
-    line-height: 2;
   }
 
   #contenedor{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: center;
     padding:1%
@@ -277,7 +273,6 @@ fading siblings
     }
   }
   #imgHistoria{
-    display: flex;
     width: 50%;
     padding: 1%;
     align-items: center;
@@ -296,6 +291,27 @@ fading siblings
     object-fit:cover;
     width: 100%;
   }
+  .histoTexto1{
+    color: rgb(70, 70, 70);
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+   @media (max-width: 600px) {
+    .histoTexto1 {
+      font-size: 30px;
+    }
+  }
+  .histoTexto2{
+    color: rgb(70, 70, 70);
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
 
 
   #textHistoria{
@@ -304,6 +320,8 @@ fading siblings
     flex-direction: column;
     justify-content: center;
     padding-right: 2%;
+    margin-top: 5%;
+    line-height:1.8;
   }
   @media (max-width: 900px) {
     #textHistoria {
@@ -316,8 +334,7 @@ fading siblings
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 19px;
+    font-size: 22px;
     /* text-align: justify; */
     
     /* Gray/00 */
@@ -326,7 +343,6 @@ fading siblings
   }
   #datos{
     display: flex;
-    width: 100%;
     height: 30%;
     justify-content: center;
     align-items: center;
@@ -349,19 +365,19 @@ fading siblings
     margin-bottom: 3%;
   }
   @media (max-width: 1500px) {
-    #datosBox {
+    .datosBox {
       margin: 0 auto;
       margin-bottom: 20px;
     }
   }
   @media (max-width: 600px) {
-    #datosBox {
+    .datosBox {
       width: 310px;
       height: 200px;
     }
   }
   @media (max-width: 400px) {
-    #datosBox {
+    .datosBox {
       width: 200px;
       height: 200px;
     }
