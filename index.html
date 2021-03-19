@@ -21,7 +21,7 @@
 </head>
 
     <body>
-        <nav class="page__menu menu">
+        <!-- <nav class="page__menu menu">
             <div id="logoMenu">
                 <img src="icons/logoMenu.svg">
             </div>
@@ -31,6 +31,23 @@
             <li class="menu__group"><a href="#historia" class="menu__link r-link text-underlined">Historia</a></li>
             <li class="menu__group"><a href="#contacto" class="menu__link r-link text-underlined">Contacto</a></li>
             </ul>
+        </nav> -->
+        <nav id="hamnav">
+          <!-- [THE HAMBURGER] -->
+          <label for="hamburger">&#9776;</label>
+          <input type="checkbox" id="hamburger"/>
+          <div id="logoMenu">
+            <img src="icons/logoMenu.svg">
+         </div>
+          <!-- [MENU ITEMS] -->
+          <div id="hamitems">
+            <ul class="menu__list r-list">
+              <li class="menu__group"><a href="#home" class="menu__link r-link text-underlined">Home</a></li>
+              <li class="menu__group"><a href="#especialidades" class="menu__link r-link text-underlined">Especialidades</a></li>
+              <li class="menu__group"><a href="#historia" class="menu__link r-link text-underlined">Historia</a></li>
+              <li class="menu__group"><a href="#contacto" class="menu__link r-link text-underlined">Contacto</a></li>
+            </ul>
+          </div>
         </nav>
         <header>
             <div id="home">
@@ -79,6 +96,17 @@
                         seguridad en todos los tratamientos. Ven tranquilo y sin miedo, te sentirás como en tu
                         casa.</p>
                     </div>
+                  </div>
+                </div>
+                <div id="valoracion">
+                  <p>Valora nuestro esfuerzo</p>
+                  <div id="botones">
+                    <form action="https://g.page/r/CfCsNwhgjBnUEAg/review">
+                      <input id="boton" type="submit" value="Valparaiso" />
+                    </form>
+                    <form action="https://g.page/clinica-dental-mingari-porcel--/review?rc">
+                      <input id="boton" type="submit" value="Santa Bárbara" />
+                    </form>
                   </div>
                 </div>
             </div>  
@@ -196,12 +224,12 @@
               <div id="info">
            
                 <div id="infoValparaiso">
-                  <p>Clinica</p>
+                  <p id="infoText">Clinica</p>
                   <h2>Valparaiso</h2>
-                  <p><img class="iconoInfo" src="icons/map.svg" alt="mapa">Avenida del Madroño, 6. Local 18</p>
-                  <p><img class="iconoInfo" src="icons/phone.svg" alt="telefono">925484840 / 690013041</p>
-                  <p><img class="iconoInfo" src="icons/email.svg" alt="email">MingariPorcel&Asoc@gmail.com</p>
-                  <p><img class="iconoInfo" src="icons/bus.png" alt="email"> Línea 3</p>
+                  <p id="infoText"><img class="iconoInfo" src="icons/map.svg" alt="mapa">Avenida del Madroño, 6. Local 18</p>
+                  <p id="infoText"><img class="iconoInfo" src="icons/phone.svg" alt="telefono">925484840 / 690013041</p>
+                  <p id="infoText"><img class="iconoInfo" src="icons/email.svg" alt="email">MingariPorcel&Asoc@gmail.com</p>
+                  <p id="infoText"><img class="iconoInfo" src="icons/bus.png" alt="email"> Línea 3</p>
                   <div id="maps">
                     <div id="mapValparaiso">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.287637517507!2d-4.056541384304884!3d39.8901918954166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6a0bc5b00ee257%3A0xd4198c600837acf0!2sClinica%20Dental%20Mingari%20Porcel!5e0!3m2!1ses!2ses!4v1615459300385!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="mapValparaiso"></iframe>
@@ -210,12 +238,12 @@
                 </div>
 
                 <div id="infoSantaBarbara">
-                  <p>Clinica</p>
+                  <p id="infoText">Clinica</p>
                   <h2>Santa Barbara</h2>
-                  <p> <img class="iconoInfo" src="icons/map.svg" alt="mapa"></img>Plaza del Sagrario S/N </p>
-                  <p><img class="iconoInfo" src="icons/phone.svg" alt="telefono"></img>925252350 / 649230308</p>
-                  <p><img class="iconoInfo" src="icons/email.svg" alt="email"></img>MingariPorcel&Asoc@gmail.com</p>
-                  <p><img class="iconoInfo" src="icons/bus.png" alt="email"> Línea 5 y 92</p>
+                  <p id="infoText"> <img class="iconoInfo" src="icons/map.svg" alt="mapa"></img>Plaza del Sagrario S/N </p>
+                  <p id="infoText"><img class="iconoInfo" src="icons/phone.svg" alt="telefono"></img>925252350 / 649230308</p>
+                  <p id="infoText"><img class="iconoInfo" src="icons/email.svg" alt="email"></img>MingariPorcel&Asoc@gmail.com</p>
+                  <p id="infoText"><img class="iconoInfo" src="icons/bus.png" alt="email"> Línea 5 y 92</p>
                   <div id="maps">
                     <div id="mapSantaBarbara">
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.6733522858069!2d-4.001635639339824!3d39.858703286198626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe673fcf51344b7e3!2sClinica%20Dental%20Mingari%20Porcel%20-%20Sta.%20Barbara!5e0!3m2!1ses!2ses!4v1615834629935!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="mapSantaBarbara"></iframe>

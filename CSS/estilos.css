@@ -1,6 +1,6 @@
 
 html{
-  
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 .r-link{
@@ -8,7 +8,7 @@ html{
   }
   
   .r-link[href]{
-    color: var(--rLinkColor) !important;
+    color: white;
     text-decoration: var(--rLinkTextDecoration, none) !important;
   }
   
@@ -58,7 +58,7 @@ html{
   */
   
   .menu{
-    background-color: var(--menuBackgroundColor, #2828287b);
+    background-color: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
     box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
     position: fixed;
     width: 100%;
@@ -73,15 +73,24 @@ html{
     margin-left:auto;
     vertical-align: middle;
   }
+  @media screen and (max-width: 768px){
+    /* Show Hamburger Icon */
+    .menu__list{
+      display: unset; 
+    }
+  }
   
   .menu__link{
     padding: var(--menuLinkPadding, 1.5rem 2.5rem);
     font-weight: 700;
     text-transform: uppercase;
+    color: white;
   }
   #logoMenu{
     width: 5%;
     padding: 1%;
+    position: relative;
+    z-index: 50;
     
   }
   #logoMenu img{
@@ -107,6 +116,7 @@ html{
   
     will-change: color;
     transition: color .25s ease-out;  
+    
   }
   
   .text-underlined::before, 
@@ -144,7 +154,66 @@ html{
   SETTINGS
   =====
   */
-  
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+  width: 100%;
+  background: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+  /* Optional */
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 50;
+}
+#hamnav:focus{
+  outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
+  outline-offset: var(--menuLinkOutlineOffset);
+}
+
+/* 
+fading siblings
+*/
+
+#hamnav:hover .menu__link:not(:hover){
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+
+/* Hide Hamburger */
+#hamnav label, #hamburger { display: none; }
+
+/* Horizontal Menu Items */
+#hamitems {
+   display: flex;
+   margin-left: auto;
+  position: relative;
+  z-index: 50;}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* Show Hamburger Icon */
+  #hamnav label { 
+    display: inline-block; 
+    color: white;
+    /* background: #a02620; */
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* Break down menu items into vertical */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  /* Toggle Show/Hide Menu */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+}
+
   .page__custom-settings{
     --menuBackgroundColor: #6c5ce7;
     --menuLinkColor: #fff;
@@ -157,7 +226,6 @@ html{
   DEMO
   =====
   */
-  
   body{
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
     margin: 0;
@@ -212,12 +280,13 @@ html{
     padding: 1%;
     align-items: center;
     justify-content: center;
-    margin-right: 2%;
+    margin-right: 0%;
   }
   @media (max-width: 900px) {
     #imgHistoria {
-      width: 100%;
-      padding: 5%;
+      width: 90%;
+      padding: 2%;
+      margin-right:0%;
     }
   }
   #imgHistoria img{
@@ -232,12 +301,11 @@ html{
     width: 50%;
     flex-direction: column;
     justify-content: center;
-    padding: 5%;
+    padding-right: 2%;
   }
   @media (max-width: 900px) {
     #textHistoria {
-      width: 100%;
-      padding: 5%;
+      width: 90%;
     }
   }
   #textHistoria p{
@@ -264,7 +332,7 @@ html{
   @media (max-width: 1100px) {
     #datos {
       display: unset;
-      padding: 5%;
+      padding: 1%;
     }
   }
 
@@ -286,6 +354,12 @@ html{
   @media (max-width: 600px) {
     #datosBox {
       width: 310px;
+      height: 200px;
+    }
+  }
+  @media (max-width: 400px) {
+    #datosBox {
+      width: 200px;
       height: 200px;
     }
   }
@@ -366,20 +440,18 @@ html{
       display: unset;
     }
   }
-  #info p{
-    
+  #infoText{
     font-family: Nunito;
     font-style: normal;
     font-size: 19px;
     line-height: 19px;
     font-weight: bold;
-    /* identical to box height */
-
-
-    /* White */
-
     color: #FFFFFF;
-
+  }
+  @media (max-width: 500px) {
+    #infoText {
+      font-size: 16px;
+    }
   }
 
   #info h2{
@@ -425,6 +497,7 @@ html{
       max-width: unset;
     }
   }
+ 
   #maps{
     
     
@@ -530,7 +603,7 @@ html{
     position: relative;
     width: 100%;
     height:auto;
-    max-height: 750px;
+    max-height: 950px;
   }
   
   .carousel > .container {
@@ -706,8 +779,9 @@ html{
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
     width:450px;
     height: 450px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     /* text-align: justify; */
     
   }
@@ -737,8 +811,6 @@ html{
       width: 250px;
       height: 270px;
     }
-  }
-  #div{
   }
   @media (max-width: 1500px) {
     #div {
@@ -867,4 +939,45 @@ html{
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
     object-fit:cover;
   }
+
+  #valoracion{
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #valoracion p{
+    color: rgb(70, 70, 70);
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    border-bottom: 1px solid  ;
+  }
+  #botones{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  @media (max-width: 500px) {
+    #botones {
+      display: unset;
+    }
+  }
+  
+  #boton{
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    border: unset;
+    background-color: #038384;
+    width: 200px;
+  }
+  @media (max-width: 500px) {
+    #boton {
+      margin-bottom: 2%;
+    }
+  }
+  
 
