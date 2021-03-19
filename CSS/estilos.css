@@ -254,12 +254,14 @@ fading siblings
     height: auto;
     width: 100%;
   }
-  #historia{
+  .historia{
     background-color: white;
     display: flex;
     flex-direction: column;
     height: auto;
     width: 100%;
+    margin:10px;
+    line-height: 2;
   }
 
   #contenedor{
@@ -336,7 +338,8 @@ fading siblings
     }
   }
 
-  #datosBox{
+
+  .datosBox{
     border-radius: 12px;
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
     width:350px;
@@ -390,23 +393,23 @@ fading siblings
     border-top-right-radius:12px;
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
   }
-  #datosTitulo{
+  .datosTitulo{
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
     font-size: 58px;
     font-weight: 800;
     margin-block-start: 0.1em;
-    margin-block-end: 0em;
+   
     padding: 5px;
     padding-top: 10%;
   }
-  #datosSub{
+  .datosSub{
     color: #5a5a5a;
     font-family: 'Nunito', sans-serif;
     font-size: 28px;
     font-weight: 800;
     margin-block-start: 0.1em;
-    margin-block-end: 0em;
+
     padding: 5px;
   }
 
@@ -440,7 +443,7 @@ fading siblings
       display: unset;
     }
   }
-  #infoText{
+  .infoText{
     font-family: Nunito;
     font-style: normal;
     font-size: 19px;
@@ -449,7 +452,7 @@ fading siblings
     color: #FFFFFF;
   }
   @media (max-width: 500px) {
-    #infoText {
+    .infoText {
       font-size: 16px;
     }
   }
@@ -498,7 +501,7 @@ fading siblings
     }
   }
  
-  #maps{
+  .maps{
     
     
     display: flex;
@@ -733,17 +736,17 @@ fading siblings
       display:unset;
     }
   }
-  #tituloValores{
+  .tituloValores{
     color: #00BCD4;
     font-family: 'Nunito', sans-serif;
     font-size: 24px;
   }
-  #textoValores{
+  .textoValores{
     /* text-align: justify; */
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
   }
-  #valor{
+  .valor{
     border-radius: 12px;
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
     width:35%;
@@ -752,7 +755,7 @@ fading siblings
     background-color: #B3EBF2;
   }
   @media (max-width: 1100px) {
-    #valor {
+    .valor {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 5%;
@@ -761,7 +764,7 @@ fading siblings
     }
   }
   @media (max-width: 450px) {
-    #valor {
+    .valor {
       width: 90%;
       margin-top: 5%;
     }
@@ -770,11 +773,8 @@ fading siblings
     height: 40px;
     width: 40px;
   }
-  #historia{
-    margin:10px;
-    line-height: 2;
-  }
-  #especialidad{
+
+  .especialidad{
     border-radius: 12px;
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
     width:450px;
@@ -786,13 +786,13 @@ fading siblings
     
   }
   @media (max-width: 1500px) {
-    #especialidad {
+    .especialidad {
       margin: 0 auto;
       margin-bottom: 20px;
     }
   }
   @media (max-width: 600px) {
-    #especialidad {
+    .especialidad {
       width: 250px;
       height: 270px;
     }
@@ -813,7 +813,7 @@ fading siblings
     }
   }
   @media (max-width: 1500px) {
-    #div {
+    .div {
       margin: 0 auto;
     }
   }
@@ -849,7 +849,7 @@ fading siblings
       display: unset;
     }
   }
-  #espeTexto1{
+  .espeTexto1{
     color: rgb(70, 70, 70);
     font-family: 'Nunito', sans-serif;
     font-size: 50px;
@@ -857,16 +857,16 @@ fading siblings
     margin-block-start: 0em;
   }
   @media (max-width: 600px) {
-    #espeTexto1 {
+    .espeTexto1 {
       font-size: 40px;
     }
   }
-  #espeTexto2{
+  .espeTexto2{
     color: rgb(70, 70, 70);
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     font-weight: 300;
-    margin-block-end: 0em;
+  
   }
   #espeTexto{
     margin-left: 11%;
@@ -877,26 +877,25 @@ fading siblings
     }
   }
 
-  #EspeTitulo{
+  .EspeTitulo{
     color: #00BCD4;
     font-family: 'Nunito', sans-serif;
     font-size: 38px;
     font-weight: 800;
     margin-block-start: 0.1em;
-    margin-block-end: 0em;
+
     padding: 20px;
   }
   @media (max-width: 600px) {
-    #EspeTitulo {
+    .EspeTitulo {
       position: relative;
       font-size: 30px;
-      margin-block-end: 0em;
       margin-block-start: 0em;
       z-index: 3;
       padding: 10px;
     }
   }
-  #EspeDesc{
+  .EspeDesc{
     color: rgb(70, 70, 70);
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
@@ -906,10 +905,10 @@ fading siblings
     margin-top:0px;
   }
   @media (max-width: 600px) {
-    #EspeDesc {
+    .EspeDesc {
       position: relative;
       font-size: 18px;
-      margin-block-end: 0em;
+
       margin-block-start: 0em;
       z-index: 3;
       padding: 10px;
@@ -963,7 +962,7 @@ fading siblings
     }
   }
   
-  #boton{
+  .boton{
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 7%);
@@ -975,7 +974,7 @@ fading siblings
     width: 200px;
   }
   @media (max-width: 500px) {
-    #boton {
+    .boton {
       margin-bottom: 2%;
     }
   }
